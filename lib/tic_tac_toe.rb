@@ -49,16 +49,6 @@ def turn(board)
   else
     turn(board)
   end
-  # puts display_board(board)
-  # (input)  input = gets.strip
-  #   index = input_to_index(input)
-    
-  #   display_board(board)
-
-  # else
-  #   puts "Please entter 1-9:"
-  #   input = gets.strip
-  #   index = input_to_index
 end
 
 def turn_count(board)
@@ -89,15 +79,12 @@ def won?(board)
       position_2 = board[win_index_2]
       position_3 = board[win_index_3]
    if position_1 == "X" && position_2 == "X" && position_3 == "X"
-       return i
+       return WIN_COMBINATIONS
      elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
-       return i
+       return WIN_COMBINATIONS
       else
         false
-     end
-    end
-    false
-end
+   end
 end
   
 def full?(board)
