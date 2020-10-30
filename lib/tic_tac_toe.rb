@@ -44,10 +44,12 @@ def turn(board)
   index = input_to_index(input)
   
   if valid_move?(board, index)
+    move(board, index, current_player)
+    current_player(board)
     puts display_board(board)
     input = gets.strip
     index = input_to_index(input)
-    move(board, index, character)
+    
     display_board(board)
 
   else
