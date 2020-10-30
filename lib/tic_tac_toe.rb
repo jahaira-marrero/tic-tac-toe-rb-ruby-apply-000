@@ -22,12 +22,12 @@ def input_to_index(user_input)
   user_input.to_i-1
 end
 
-def character
-  character = "X" || "O"
-end
+# def character
+#   character = "X" || "O"
+# end
 
-def move(board, index, character)
-  board[index] = character
+def move(board, index, current_player)
+  board[index] = current_player
 end
 
 def position_taken?(board, index)
