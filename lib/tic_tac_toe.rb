@@ -86,6 +86,7 @@ def won?(board)
         false
    end
 end
+end
   
 def full?(board)
     if (board.select{|i| i == "X" || i == "O"}).length < 9
