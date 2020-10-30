@@ -97,7 +97,7 @@ def full?(board)
 end
   
 def draw?(board)
-   if full?(board) == true && won?(board) == false
+   if !won?(board) && full?(board)
       return true
     else
       return false
@@ -105,7 +105,7 @@ def draw?(board)
 end
   
 def over?(board)
-    if full?(board) == true
+    if draw?(board)|| won?(board)
       return true
     elsif won?(board)
       return true
@@ -115,12 +115,7 @@ def over?(board)
 end
   
 def winner(board)
-    winner = won?(board)
-    if winner != false
-      if board[winner[0]] == "O"
-        return "O"
-      elsif board[winner[0]] == "X"
-        return "X"
-      end
+    if win_combination = won?(board)
+       board[WIN_COMBINATION.first]
     end
 end
