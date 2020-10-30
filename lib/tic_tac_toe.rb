@@ -47,6 +47,7 @@ def turn(board)
     move(board, index, current_player(board))
     display_board(board)
   else
+    turn(board)
   end
   # puts display_board(board)
   # (input)  input = gets.strip
@@ -58,7 +59,6 @@ def turn(board)
   #   puts "Please entter 1-9:"
   #   input = gets.strip
   #   index = input_to_index
-  end
 end
 
 def turn_count(board)
