@@ -46,16 +46,17 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index, current_player)
     current_player(board)
-    # puts display_board(board)
-    input = gets.strip
-    index = input_to_index(input)
     
-    display_board(board)
+  # puts display_board(board)
+  # (input)  input = gets.strip
+  #   index = input_to_index(input)
+    
+  #   display_board(board)
 
-  else
-    puts "Please entter 1-9:"
-    input = gets.strip
-    index = input_to_index(input)
+  # else
+  #   puts "Please entter 1-9:"
+  #   input = gets.strip
+  #   index = input_to_index
   end
 end
 
